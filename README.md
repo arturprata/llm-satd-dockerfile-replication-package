@@ -184,45 +184,41 @@ Examples of priority rule:
 * If a comment could be classified as both Test/ImprovementForTest and Design/SizeReduction, choose Test/ImprovementForTest.
 
 Output format:
-Return only CSV. Do not use Markdown. Do not add explanations outside the CSV.
+Return the classifications in an Excel file (.xlsx). Do not add explanations outside the file.
 
-The CSV must have exactly these columns:
+The Excel file must have exactly these columns:
 
 id,classification,class,subclass,confidence,justification
 
 Column rules:
 
-* id: the comment identifier provided in the dataset.
-* classification: SATD, Non-debt, or Unidentifiable.
-* class: Code, Test, Defect, Design, Process, Unclassifiable, or N/A.
-* subclass: one of the allowed subclasses or N/A.
-* confidence: High, Medium, or Low.
-* justification: one short sentence explaining the decision.
+- id: the comment identifier provided in the dataset.
+- classification: SATD, Non-debt, or Unidentifiable.
+- class: Code, Test, Defect, Design, Process, Unclassifiable, or N/A.
+- subclass: one of the allowed subclasses or N/A.
+- confidence: High, Medium, or Low.
+- justification: one short sentence explaining the decision.
 
 If classification is Non-debt:
 
-* class must be N/A.
-* subclass must be N/A.
+- class must be N/A.
+- subclass must be N/A.
 
 If classification is Unidentifiable:
 
-* class must be N/A.
-* subclass must be N/A.
+- class must be N/A.
+- subclass must be N/A.
 
 Execution instructions:
 
-* Classify all 382 comments from the dataset.
-* Do not stop after a small sample.
-* Do not ask me to paste the rows manually.
-* Send the results in sequential parts of 30 rows per message until all 382 comments have been classified.
-* Each part must continue from the previous one without repeating already classified comments.
-* Each output message must contain only CSV rows.
-* Include the CSV header only in the first output message.
-* Preserve the original id values exactly as they appear in the dataset.
-* Return exactly one output row for each dataset row.
-* Do not skip any comment.
-* Do not merge comments.
-* Continue sending parts of 30 rows until the classification is complete.
+- Classify all 382 comments from the dataset.
+- Do not stop after a small sample.
+- Do not ask me to paste the rows manually.
+- Preserve the original id values exactly as they appear in the dataset.
+- Return exactly one output row for each dataset row.
+- Do not skip any comment.
+- Do not merge comments.
+- Export the final result as an Excel file (.xlsx) with the required columns.
 ````
 
 ## Metodologia
