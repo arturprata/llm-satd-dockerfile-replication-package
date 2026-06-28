@@ -1,4 +1,3 @@
-````markdown
 # Dockerfile SATD LLM Replication
 
 Este repositório contém o pacote de replicação de um estudo empírico sobre **Self-Admitted Technical Debt (SATD)** em comentários de Dockerfiles. O trabalho replica parcialmente o estudo original de Azuma et al., utilizando modelos de linguagem de grande porte para classificar automaticamente comentários previamente classificados manualmente pelos autores.
@@ -270,6 +269,3 @@ As classificações produzidas pelos modelos foram comparadas com a classificaç
 ## Referência
 
 Azuma, H., Matsumoto, S., Kamei, Y., & Kusumoto, S. (2022). *An empirical study on self-admitted technical debt in Dockerfiles*. Empirical Software Engineering, 27, 49. https://doi.org/10.1007/s10664-021-10081-7
-
-```
-```
